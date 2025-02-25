@@ -1,27 +1,23 @@
 package manager;
 
+import shapes.BaseAreaCompare;
 import shapes.Shape;
+import shapes.VolumeCompare;
 import utilities.SortAlgorithm;
 
-//refer to demo001 BasicFileIO.java for a simple example on how to
-// read data from a text file
 
-// refer to demo01 Test.java for an example on how to parse command
-// line arguments and benchmarking tests
-
-// refer to demo02 Student.java for comparable implementation, and
-// NameCompare.java or GradeCompare for comparator implementations
-
-// refer to demo02 KittySort.java on how to use a custom sorting
-// algorithm on a list of comparables to sort using either the
-// natural order (comparable) or other orders (comparators)
 public class SortManager {
 	
 	private Shape[] shapes;
     private String fileName;
     private char compareType;
     private char sortType;
-
+    
+    /**
+     * Creates a SortManager with the specified arguments.
+     * @param args arguments
+     */
+    
     public SortManager(String[] args) {
         for (String s : args) 
         {
@@ -43,7 +39,11 @@ public class SortManager {
         sortShapes();
         
     }
-
+    
+    /**
+     * Sort shapes in the shapes array
+     */
+    
 	private void sortShapes() 
 	{
 		if(compareType == 'h' || compareType == 'H')
@@ -57,8 +57,37 @@ public class SortManager {
                 SortAlgorithm.quickSort(shapes, 0, shapes.length - 1);
             }
 		}
+		else if(compareType == 'a' || compareType == 'A')
+		{
+			if(sortType == 'b' || sortType == 'B')
+			{
+				SortAlgorithm.bubbleSort(shapes);
+			}
+			else if (sortType == 'q' || sortType == 'Q') 
+			{  
+				BaseAreaCompare bac = new BaseAreaCompare();
+                SortAlgorithm.quickSort(shapes, 0, shapes.length - 1, bac);
+            }
+		}
+		else if(compareType == 'v' || compareType == 'V')
+		{
+			if(sortType == 'b' || sortType == 'B')
+			{
+				SortAlgorithm.bubbleSort(shapes);
+			}
+			else if (sortType == 'q' || sortType == 'Q') 
+			{  
+				VolumeCompare vc = new VolumeCompare();
+                SortAlgorithm.quickSort(shapes, 0, shapes.length - 1, vc);
+            }
+		}
+		
 	}
-
+	
+	/**
+	 * Loads the shapes into the shapes array
+	 */
+	
 	private void loadShapes() 
 	{
 		// TODO Auto-generated method stub

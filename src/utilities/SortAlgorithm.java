@@ -1,9 +1,13 @@
 package utilities;
 
+import java.util.Comparator;
+import shapes.BaseAreaCompare;
+import shapes.VolumeCompare;
 import shapes.Shape;
 
-public class SortAlgorithm {
-
+public class SortAlgorithm 
+{
+	// WILL HAVE TOTAL 12 SORTING ALGORITHM METHODS 2 for each type 1 Comparable for Comparable and 2nd for Comparator
     public static <T extends Comparable<T>> void bubbleSort(T[] arr) 
     {
         
@@ -50,4 +54,36 @@ public class SortAlgorithm {
         arr[leftPointer] = arr[rightPointer];
         arr[rightPointer] = temp;
     }
+
+    public static void quickSort(Shape[] shapes, int lowIndex, int highIndex, Comparator<Shape> c) 
+    {
+        if (lowIndex < highIndex) 
+        {
+            int partitionIndex = partition(shapes, lowIndex, highIndex, c);
+            quickSort(shapes, lowIndex, partitionIndex - 1, c);
+            quickSort(shapes, partitionIndex + 1, highIndex, c);
+        }
+    }
+
+    
+    public static int partition(Shape[] shapes, int lowIndex, int highIndex, Comparator<Shape> c) 
+    {
+        Shape pivot = shapes[highIndex]; 
+        int leftPointer = lowIndex - 1;  
+
+        for (int rightPointer = lowIndex; rightPointer < highIndex; rightPointer++) 
+        {
+         
+            if (c.compare(shapes[rightPointer], pivot) < 0) 
+            { 
+                leftPointer++;
+              
+                swap(shapes, leftPointer, rightPointer);  
+            }
+        }
+
+        swap(shapes, leftPointer + 1, highIndex);
+        return leftPointer + 1;  
+    }
+
 }
