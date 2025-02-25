@@ -2,7 +2,7 @@ package shapes;
 
 /**
  * Class representing a Shape with height
- *@author Shawn, Johram, LLoydShawn
+ *@author Shawn, Johram, LLoyd
  */
 
 public abstract class Shape implements Comparable<Shape>

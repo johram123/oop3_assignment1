@@ -1,6 +1,7 @@
 package manager;
 
 import shapes.Shape;
+import utilities.SortAlgorithm;
 
 //refer to demo001 BasicFileIO.java for a simple example on how to
 // read data from a text file
@@ -30,11 +31,11 @@ public class SortManager {
             } 
             else if (s.startsWith("-t") || s.startsWith("-T")) 
             {
-                compareType = s.charAt(2);
+                compareType = s.substring(2).charAt(0);
             } 
             else if (s.startsWith("-s") || s.startsWith("-S")) 
             {
-                sortType = s.charAt(2);
+                sortType = s.substring(2).charAt(0);
             }
         }
         
@@ -43,9 +44,19 @@ public class SortManager {
         
     }
 
-	private void sortShapes() {
-		// TODO Auto-generated method stub
-		
+	private void sortShapes() 
+	{
+		if(compareType == 'h' || compareType == 'H')
+		{
+			if(sortType == 'b' || sortType == 'B')
+			{
+				SortAlgorithm.bubbleSort(shapes);
+			}
+			else if (sortType == 'q' || sortType == 'Q') 
+			{  
+                SortAlgorithm.quickSort(shapes, 0, shapes.length - 1);
+            }
+		}
 	}
 
 	private void loadShapes() 
