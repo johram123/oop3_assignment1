@@ -39,7 +39,7 @@ public class Cone extends Shape
 
 	@Override
 	public double calcVolume() {
-		return calcBaseArea() / 3;
+		return calcBaseArea() * getHeight() / 3;
 	}
 
 	@Override
