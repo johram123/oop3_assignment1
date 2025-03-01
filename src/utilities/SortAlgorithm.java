@@ -7,75 +7,7 @@ import shapes.Shape;
 
 public class SortAlgorithm {
 
-    // Bubble Sort using Comparable (height)
-    public static <T extends Comparable<T>> void bubbleSort(T[] arr) {
-        int n = arr.length;
-        boolean swapped;
-        for (int i = 0; i < n - 1; i++) {
-            swapped = false;
-            for (int j = 0; j < n - i - 1; j++) {
-                if (arr[j].compareTo(arr[j + 1]) < 0) {
-                    T temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                    swapped = true;
-                }
-            }
-            if (!swapped) break;
-        }
-    }
-
-    // Bubble Sort using Comparator (base area/volume)
-    public static <T> void bubbleSort(T[] arr, Comparator<T> comparator) {
-        int n = arr.length;
-        boolean swapped;
-        for (int i = 0; i < n - 1; i++) {
-            swapped = false;
-            for (int j = 0; j < n - i - 1; j++) {
-                if (comparator.compare(arr[j], arr[j + 1]) < 0) {
-                    T temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                    swapped = true;
-                }
-            }
-            if (!swapped) break;
-        }
-    }
-
-    // Selection Sort using comparable (height)
-    public static <T extends Comparable<T>> void selectionSort(T[] arr) {
-        int n = arr.length;
-        for (int i = 0; i < n - 1; i++) {
-            int maxIndex = i;
-            for (int j = i + 1; j < n; j++) {
-                if (arr[j].compareTo(arr[maxIndex]) > 0) {
-                    maxIndex = j;
-                }
-            }
-            T temp = arr[maxIndex];
-            arr[maxIndex] = arr[i];
-            arr[i] = temp;
-        }
-    }
-
-    // Selection Sort using comparator (base area/volume)
-    public static <T> void selectionSort(T[] arr, Comparator<T> comparator) {
-        int n = arr.length;
-        for (int i = 0; i < n - 1; i++) {
-            int maxIndex = i;
-            for (int j = i + 1; j < n; j++) {
-                if (comparator.compare(arr[j], arr[maxIndex]) > 0) {
-                    maxIndex = j;
-                }
-            }
-            T temp = arr[maxIndex];
-            arr[maxIndex] = arr[i];
-            arr[i] = temp;
-        }
-    }
-
-    
+   
     public static void quickSort(Shape[] arr, int lowIndex, int highIndex) 
     {
         // if statement for recursion
@@ -108,6 +40,56 @@ public class SortAlgorithm {
         swap(arr, leftPointer + 1, highIndex);
         return leftPointer + 1;  
     }
+    
+    
+    
+    
+    
+    
+    
+ // bubble sort
+    public static void bubbleSort(Shape[] shapes, Comparator<Shape> comparator) {
+        int n = shapes.length;
+        boolean swapped;
+        for (int i = 0; i < n - 1; i++) {
+            swapped = false;
+            for (int j = 0; j < n - i - 1; j++) {
+                // Use the comparator to compare shapes in descending order
+                if (comparator.compare(shapes[j], shapes[j + 1]) < 0) {
+                    // Swap shapes[j] and shapes[j + 1]
+                    Shape temp = shapes[j];
+                    shapes[j] = shapes[j + 1];
+                    shapes[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+            // If no elements were swapped, the array is already sorted
+            if (!swapped) break;
+        }
+    }
+
+    // selection sort
+    public static void selectionSort(Shape[] shapes, Comparator<Shape> comparator) {
+        int n = shapes.length;
+        for (int i = 0; i < n - 1; i++) {
+            int maxIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                // Use the comparator to find the maximum element
+                if (comparator.compare(shapes[j], shapes[maxIndex]) > 0) {
+                    maxIndex = j;
+                }
+            }
+            // Swap the found maximum element with the first unsorted element
+            Shape temp = shapes[maxIndex];
+            shapes[maxIndex] = shapes[i];
+            shapes[i] = temp;
+        }
+    }
+    
+    
+    
+    
+    
 
     public static void swap(Shape[] arr, int leftPointer, int rightPointer) 
     {
