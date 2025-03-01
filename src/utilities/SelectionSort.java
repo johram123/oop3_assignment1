@@ -2,7 +2,14 @@ package utilities;
 
 import java.util.Comparator;
 
-public class SelectionSort {
+/**
+ * Sorts an array using Selection Sort with natural ordering.
+ * @param <T> type of elements to be sorted
+ * @param arr array to be sorted
+ * @author Shawn, Johram, Lloyd
+ */
+
+public class SelectionSort {	
 	// Selection Sort using comparable (height)
     public static <T extends Comparable<T>> void selectionSort(T[] arr) {
         int n = arr.length;
@@ -19,6 +26,13 @@ public class SelectionSort {
         }
     }
 
+    /**
+     * Sorts an array using Selection Sort with a custom comparator.
+     * @param <T> type of elements to be sorted
+     * @param arr array to be sorted
+     * @param comparator comparator to compare elements
+     */
+	
     // Selection Sort using comparator (base area/volume)
     public static <T> void selectionSort(T[] arr, Comparator<T> comparator) {
         int n = arr.length;
