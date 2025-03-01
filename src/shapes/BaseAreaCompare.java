@@ -1,7 +1,10 @@
 package shapes;
 
 import java.util.Comparator;
-
+/**
+ * Compares shapes based on their base area
+ * @author Shawn, Lloyd, Johram
+ */
 public class BaseAreaCompare implements Comparator<Shape>
 {
 

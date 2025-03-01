@@ -1,8 +1,15 @@
 package shapes;
-
+/**
+ * Class representing a Triangular Prism with a height and side length
+ * @author Shawn, Johram, Lloyd
+ */
 public class TriangularPrism extends Prism 
 {
-
+	/**
+     * Creates a Triangular Prism with the specified height and side length
+     * @param height height of triangular prism
+     * @param side side length of triangular prism
+     */
     public TriangularPrism(double height, double side) 
     {
         super(height, side);

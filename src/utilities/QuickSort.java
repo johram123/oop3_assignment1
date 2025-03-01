@@ -3,6 +3,7 @@ package utilities;
 import java.util.Comparator;
 import shapes.Shape;
 
+
 public class QuickSort 
 {
     public static void quickSort(Shape[] arr, int lowIndex, int highIndex) 
@@ -37,6 +38,9 @@ public class QuickSort
         swap(arr, leftPointer + 1, highIndex);
         return leftPointer + 1;  
     }
+    
+    
+ 
 
     public static void swap(Shape[] arr, int leftPointer, int rightPointer) 
     {

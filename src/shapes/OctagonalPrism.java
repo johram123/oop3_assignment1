@@ -1,8 +1,15 @@
 package shapes;
-
+/**
+ * Class representing an octagonal Prism with a height and side length
+ * @author Shawn, Johram, Lloyd
+ */
 public class OctagonalPrism extends Prism 
 {
-
+	/**
+	 * Creates an octagonal Prism with the  height and side length
+	 * @param height height of octagonal prism
+	 * @param side side of octagonal prism
+	 */
     public OctagonalPrism(double height, double side) 
     {
         super(height, side);
