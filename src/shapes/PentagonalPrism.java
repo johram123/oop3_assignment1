@@ -1,8 +1,19 @@
 package shapes;
 
+/**
+ * Class representing a Pentagonal Prism with a height and side length
+ * @author Shawn, Johram, Lloyd
+*/
+
 public class PentagonalPrism extends Prism 
 {
 
+	  /**
+     * Creates a Pentagonal Prism with the specified height and side length
+     * @param height height of pentagonal prism
+     * @param side side length of pentagonal prism
+     */
+	
     public PentagonalPrism(double height, double side) 
     {
         super(height, side);

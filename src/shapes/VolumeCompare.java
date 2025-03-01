@@ -2,6 +2,11 @@ package shapes;
 
 import java.util.Comparator;
 
+/**
+ * Compares shapes based on their volume
+ * @author Shawn, Lloyd, Johram
+ */
+
 public class VolumeCompare implements Comparator<Shape> {
 
 	@Override

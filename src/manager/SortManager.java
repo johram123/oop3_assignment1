@@ -5,6 +5,10 @@ import shapes.Shape;
 import shapes.VolumeCompare;
 import utilities.SortAlgorithm;
 
+/**
+ * Sort management of shapes based on specified criteria
+ * @author Shawn, Johram, Lloyd
+ */
 
 public class SortManager {
 	

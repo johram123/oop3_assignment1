@@ -1,10 +1,13 @@
 package shapes;
 
 import java.util.Comparator;
+/**
+ * Compares shapes based on their base area
+ * @author Shawn, Lloyd, Johram
+ */
 
 public class BaseAreaCompare implements Comparator<Shape>
 {
-
 	@Override
 	public int compare(Shape s1, Shape s2) 
 	{
