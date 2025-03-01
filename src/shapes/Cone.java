@@ -41,14 +41,9 @@ public class Cone extends Shape
 	public double calcVolume() {
 		return calcBaseArea() * getHeight() / 3;
 	}
-
+	
 	@Override
-	public String toString() 
-	{
-		return "Cone [radius=" + radius + ", getRadius()=" + getRadius() + ", calcBaseArea()=" + calcBaseArea()
-				+ ", calcVolume()=" + calcVolume() + ", getHeight()=" + getHeight() + "]";
+	public String toString() {
+		return "Cone";
 	}
-	
-	
-	
 }

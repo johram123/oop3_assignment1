@@ -11,10 +11,10 @@ public abstract class Prism extends Shape
 
 	public double getSide() {
 		return side;
-	}
-
+	}	
+	
 	@Override
 	public double calcVolume() {
 		return calcBaseArea() * getHeight();
-	}	
+	}
 }

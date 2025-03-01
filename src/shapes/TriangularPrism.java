@@ -14,11 +14,8 @@ public class TriangularPrism extends Prism
         return Math.pow(getSide(), 2) * Math.sqrt(3) / 4;
     }
 
-	@Override
+    @Override
 	public String toString() {
-		return "TriangularPrism [calcBaseArea()=" + calcBaseArea() + ", getSide()=" + getSide() + ", calcVolume()="
-				+ calcVolume() + ", getHeight()=" + getHeight() + "]";
+		return "TriangularPrism";
 	}
-    
-    
 }

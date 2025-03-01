@@ -39,10 +39,9 @@ public class Cylinder extends Shape
     {
         return calcBaseArea() * getHeight();
     }
-
+    
     @Override
-    public String toString() {
-        return "Cylinder [radius=" + radius + ", getRadius()=" + getRadius() + ", calcBaseArea()=" + calcBaseArea()
-                + ", calcVolume()=" + calcVolume() + ", getHeight()=" + getHeight() + "]";
-    }
+	public String toString() {
+		return "Cylinder";
+	}
 }

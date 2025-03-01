@@ -39,10 +39,9 @@ public class Pyramid extends Shape
     {
         return calcBaseArea() * getHeight() / 3;
     }
-
+    
     @Override
-    public String toString() {
-        return "Pyramid [sideLength=" + sideLength + ", getSideLength()=" + getSideLength() + ", calcBaseArea()=" 
-                + calcBaseArea() + ", calcVolume()=" + calcVolume() + ", getHeight()=" + getHeight() + "]";
-    }
+	public String toString() {
+		return "Pyramid";
+	}
 }

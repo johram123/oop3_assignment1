@@ -13,13 +13,9 @@ public class SquarePrism extends Prism
 	{
 		return getSide() * getSide();
 	}
-
+	
 	@Override
-	public String toString() 
-	{
-		return "SquarePrism [calcBaseArea()=" + calcBaseArea() + ", getSide()=" + getSide() + ", calcVolume()="
-				+ calcVolume() + ", getHeight()=" + getHeight() + "]";
+	public String toString() {
+		return "SquarePrism";
 	}
-	
-	
 }

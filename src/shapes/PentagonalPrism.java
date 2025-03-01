@@ -13,12 +13,10 @@ public class PentagonalPrism extends Prism
     {
         return 5 * Math.pow(getSide(), 2) * Math.tan(Math.toRadians(54)) / 4;
     }
-
-	@Override
+    
+    @Override
 	public String toString() {
-		return "PentagonalPrism [calcBaseArea()=" + calcBaseArea() + ", getSide()=" + getSide() + ", calcVolume()="
-				+ calcVolume() + ", getHeight()=" + getHeight() + "]";
+		return "PentagonalPrism";
 	}
-
    
 }
