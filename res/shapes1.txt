@@ -9,4 +9,3 @@ Cone 29639.636 29106.678
 PentagonalPrism 3122.807 9856.483
 PentagonalPrism 27622.35 10609.379
 TriangularPrism 20863.556 21483.11
-	
