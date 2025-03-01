@@ -1,8 +1,6 @@
 package utilities;
 
 import java.util.Comparator;
-import shapes.BaseAreaCompare;
-import shapes.VolumeCompare;
 import shapes.Shape;
 
 public class SortAlgorithm {
@@ -148,5 +146,7 @@ public class SortAlgorithm {
         swap(shapes, leftPointer + 1, highIndex);
         return leftPointer + 1;  
     }
+    
+    
 
 }
