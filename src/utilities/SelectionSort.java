@@ -3,8 +3,8 @@ package utilities;
 import java.util.Comparator;
 
 /**
- * Sorts an array using Selection Sort with natural ordering.
- * @param <T> type of elements to be sorted
+ * Sorts an array using Selection Sort
+ * @param <T> elements to be sorted
  * @param arr array to be sorted
  * @author Shawn, Johram, Lloyd
  */
@@ -27,8 +27,8 @@ public class SelectionSort {
     }
 
     /**
-     * Sorts an array using Selection Sort with a custom comparator.
-     * @param <T> type of elements to be sorted
+     * Sorts an array using Selection Sort comparator.
+     * @param <T> elements to be sorted
      * @param arr array to be sorted
      * @param comparator comparator to compare elements
      */
