@@ -2,6 +2,13 @@ package utilities;
 
 import java.util.Comparator;
 
+/**
+ * Implements the Bubble Sort algorithm.
+ * @param <T> type of elements to be sorted
+ * @param arr array to be sorted
+ * @author Shawn, Johram, Lloyd
+ */
+
 public class BubbleSort {
 	// Bubble Sort using Comparable (height)
     public static <T extends Comparable<T>> void bubbleSort(T[] arr) {
@@ -21,6 +28,13 @@ public class BubbleSort {
         }
     }
 
+     /**
+     * Sorts an array using Bubble Sort with comparator.
+     * @param <T> elements to be sorted
+     * @param arr array to be sorted
+     * @param comparator comparator to compare elements
+     */
+	
     // Bubble Sort using Comparator (base area/volume)
     public static <T> void bubbleSort(T[] arr, Comparator<T> comparator) {
         int n = arr.length;
